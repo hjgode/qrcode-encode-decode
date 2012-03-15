@@ -450,7 +450,7 @@ namespace ThoughtWorks.QRCode.Codec
                 //resource based reading
                 fileName = "qrv" + Convert.ToString(qrcodeVersion) + "_" + Convert.ToString(ec); //test
                 System.Diagnostics.Debug.WriteLine("Trying to read: '" + fileName + "'");
-                object o = Resources.ResourceManager.GetObject(fileName);
+                
                 MemoryStream memoryStream = new MemoryStream((byte[])Resources.ResourceManager.GetObject(fileName)); //"qrv7_0"
                 StreamReader reader = new StreamReader(memoryStream);
 

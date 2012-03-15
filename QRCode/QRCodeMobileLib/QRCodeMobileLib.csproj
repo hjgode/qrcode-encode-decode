@@ -82,6 +82,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="QRcodeDataSizesClass.cs" />
     <Compile Include="QRCodeDecoder.cs" />
     <Compile Include="QRCodeEncoder.cs" />
     <Compile Include="reader\pattern\AlignmentPattern.cs" />

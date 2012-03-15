@@ -28,10 +28,10 @@ namespace ThoughtWorks.QRCode.Codec
         internal int numLastCorrections;
         internal bool correctionSucceeded;
         
-        internal virtual int[][] imageToIntArray(QRCodeImage image)
-        {
-            return image.GetPixels();
-        }
+        //internal virtual int[][] imageToIntArray(QRCodeImage image)
+        //{
+        //    return image.GetPixels();
+        //}
 
 		public static DebugCanvas Canvas
 		{

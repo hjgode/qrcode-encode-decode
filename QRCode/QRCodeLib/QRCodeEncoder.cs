@@ -505,7 +505,8 @@ namespace ThoughtWorks.QRCode.Codec
                 //StreamReader reader = new StreamReader(filename);
 
                 String fileName = "qrvfr" + Convert.ToString(qrcodeVersion);
-                MemoryStream memoryStream = new MemoryStream(Resources.GetResource(fileName));
+                MemoryStream memoryStream = new MemoryStream((byte[])Resources.ResourceManager.GetObject(fileName)); //"qrv7_0"
+                //MemoryStream memoryStream = new MemoryStream(Resources.GetResource(fileName));
                 
 				BufferedStream bis = new BufferedStream(memoryStream);
 				SystemUtils.ReadInput(bis, frameData, 0, frameData.Length);
@@ -736,7 +737,8 @@ namespace ThoughtWorks.QRCode.Codec
 			    //String filename = QRCODE_DATA_PATH + @"\rsc" + rsEccCodewords.ToString() + ".dat";
 			    //StreamReader reader = new StreamReader(filename);
                 String fileName = "rsc" + rsEccCodewords.ToString();
-                MemoryStream memoryStream = new MemoryStream(Resources.GetResource(fileName));
+                MemoryStream memoryStream = new MemoryStream((byte[])Resources.ResourceManager.GetObject(fileName)); //"qrv7_0"
+                //MemoryStream memoryStream = new MemoryStream(Resources.GetResource(fileName));
                 BufferedStream bis = new BufferedStream(memoryStream);
 				for (int i = 0; i < 256; i++)
 				{
