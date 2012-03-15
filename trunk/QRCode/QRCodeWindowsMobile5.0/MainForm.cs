@@ -10,6 +10,7 @@ using ThoughtWorks.QRCode.Codec;
 using ThoughtWorks.QRCode.Codec.Data;
 using ThoughtWorks.QRCode.Codec.Util;
 
+using QRCode;
 
 namespace QRCodeWindowsMobile5
 {
@@ -32,7 +33,6 @@ namespace QRCodeWindowsMobile5
                 MessageBox.Show("Data must not be empty.");
                 return;
             }
-           
 
             QRCodeEncoder qrCodeEncoder = new QRCodeEncoder();
             //HGO
@@ -80,6 +80,12 @@ namespace QRCodeWindowsMobile5
                 qrCodeEncoder.QRCodeErrorCorrect = QRCodeEncoder.ERROR_CORRECTION.Q;
             else if (errorCorrect == "H")
                 qrCodeEncoder.QRCodeErrorCorrect = QRCodeEncoder.ERROR_CORRECTION.H;
+
+            if (! QRcodeDataSizesClass.doesFit((uint)txtEncodeData.Text.Length, Convert.ToUInt16(cboVersion.Text), cboEncoding.Text, cboCorrectionLevel.Text))
+            {
+                MessageBox.Show("Data will not find with ECC and Encoding settings");
+                return;
+            }
 
             Image image;
             string data = txtEncodeData.Text;

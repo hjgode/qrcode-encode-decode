@@ -16,6 +16,6 @@ namespace ThoughtWorks.QRCode.Codec.Data
         }
         int getPixel(int x, int y);
 
-        public int[][] GetPixels();
+        int[][] GetPixels();
 	}
 }
