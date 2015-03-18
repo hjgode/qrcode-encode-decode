@@ -1,0 +1,1 @@
+It does not look like twit88 nor toughtworks is doing anything to maintain and support this old source code. I included all suggestions of the publiscations at http://www.codeproject.com/Articles/20574/Open-Source-QRCode-Library
